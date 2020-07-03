@@ -64,6 +64,8 @@ export class LoginComponent implements OnInit {
       console.log(this.user_ID);
       console.log(this.password);
 
+      var flag =0;
+
       for(var i=0;i<this.get_result.length;i++)
       {
         if(this.get_result[i].student_id == this.user_ID)
@@ -71,6 +73,7 @@ export class LoginComponent implements OnInit {
           if(this.get_result[i].student_password == this.password)
           {
             alert("Credentials matched!");
+            flag = 1;
             break;
           }
 
@@ -82,9 +85,11 @@ export class LoginComponent implements OnInit {
           }
 
         }
-        else
-        alert("Username/Password wrong!");
       }
+
+      if(flag==0)
+      alert("Username/Password wrong!");
+
     });
   }
   
