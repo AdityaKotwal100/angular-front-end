@@ -16,10 +16,10 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  @ViewChild('userID', {static:true}) id_no;
-  @ViewChild('psw', {static:true}) psw;
-  @ViewChild('psw1',{static:true}) psw1;
-  @ViewChild('cpw',{static:true}) cpw;
+  @ViewChild('userID') id_no;
+  @ViewChild('psw') psw;
+  @ViewChild('psw1') psw1;
+  @ViewChild('cpw') cpw;
   register_form(){
     this.show = !this.show;
   }
@@ -64,11 +64,11 @@ export class LoginComponent implements OnInit {
       console.log(this.user_ID);
       console.log(this.password);
 
-      for(var i=0;i<this.get_result.length();i++)
+      for(var i=0;i<this.get_result.length;i++)
       {
-        if(this.get_result[i].user_ID == this.user_ID)
+        if(this.get_result[i].student_id == this.user_ID)
         {
-          if(this.get_result[i].psw == this.password)
+          if(this.get_result[i].student_password == this.password)
           {
             alert("Credentials matched!");
             break;
