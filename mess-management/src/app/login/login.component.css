@@ -1,6 +1,8 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 
-
+.register{
+  margin-bottom: 10%;
+}
 .bg1{
     background-color : #ffffff;
     width: 600px;

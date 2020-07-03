@@ -2,8 +2,9 @@
 <div class = "container bg1">
    
         
-      
+      <div *ngIf = "show">
         <div class="container">
+          <h1 style="text-align:center;">Login Page</h1>
           <label for="uname"><b>User ID</b></label>
           <input type="text" placeholder="User ID" #userID name="uname" required>
             <br><br>
@@ -12,40 +13,29 @@
           <br><br>
       
           <button type="submit" style = "margin-left: 34%;" (click) = "verify()">Login</button>
-          
-          
-          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+          <button type="button" style = "margin-left: 34%; color : white;" (click) = "register_form()">Register</button>
         </div>
-          
-          <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-          
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Modal Header</h4>
-                </div>
-                <div class="modal-body">
-                  <label for="uname"><b>User ID</b></label>
-                  <input type="text" placeholder="User ID" #userID name="uname" required>
-                  <br><br>
-                  <label for="psw" ><b>Password</b></label>
-                  <input type="password" placeholder="Enter Password" #psw name="psw" required>
-                  <br><br> 
-                  <label for="psw" ><b>Confirm Password</b></label>
-                  <input type="password" placeholder="Confirm Password" #psw name="psw" required>
-                  
+      </div>
 
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-          
-            </div>
-          </div>
         
+        <div *ngIf = "!show">
+        <div class="container register">
+          <h1 style="text-align:center;">Registration page</h1>
+          <label for="uname"><b>Name</b></label>
+          <input type="text" placeholder="Name" name="name" required>
+          <label for="uname"><b>Email</b></label>
+          <input type="text" placeholder="Email"  name="mail" required>
+          <label for="uname"><b>User ID</b></label>
+          <input type="text" placeholder="User ID"  name="userid" required>
+          <label for="psw" ><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" #psw1 name="psw" required>
+          <label for="psw" ><b>Confirm Password</b></label>
+          <input type="password" placeholder="Confirm Password"  #cpw name="conf_psw" required>
       
-      
+          <button type="submit" style = "margin-left: 34%;" (click) = "confirm_password()">Register</button>
+          <button type="button" style = "margin-left: 34%" (click) = "register_form()">Go back</button>
+        </div>
+      </div>
     </div>
+
 
