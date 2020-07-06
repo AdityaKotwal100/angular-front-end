@@ -3,7 +3,7 @@
 <div class = "container bg1">
    
         
-      <div *ngIf = "show">
+      <div *ngIf = "show_register">
         <div class="container">
           <h1 style="text-align:center;">Login Page</h1>
           <label for="uname"><b>User ID</b></label>
@@ -19,7 +19,7 @@
       </div>
 
         
-        <div *ngIf = "show">
+        <div *ngIf = "!show_register">
         <div class="container register">
           <h1 style="text-align:center;">Registration page</h1>
           <label for="uname"><b>Name</b></label>
