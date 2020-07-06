@@ -1,0 +1,152 @@
+<div class = "row" style = "width:100%;">
+<app-topnav></app-topnav>
+</div>
+<div class = "row">
+<div class = "col-sm-3"></div>
+<div class = "col-sm-6">
+
+    <div class ="row">
+        <table class="table">
+            <thead>
+                <tr>
+                  <th>Meal</th>
+                  <th>Item 1</th>
+                  <th>Item 2</th>
+                  <th>Item 3</th>
+                  <th>Item 4</th>
+                  <th>Item 5</th>
+                  <th>Item 6</th>
+                  <th>Total price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr> 
+                    <td> <b>Breakfast </b></td> 
+                    <td> {{breakfast[0].item1}} </td>
+                    <td> {{breakfast[0].item2}} </td>
+                    <td> {{breakfast[0].item3}} </td>
+                    <td> {{breakfast[0].item4}} </td>
+                    <td> {{breakfast[0].item5}} </td>
+                    <td> {{breakfast[0].item6}} </td>
+                    <td> {{dinner[0].item6}} </td>
+                    
+                </tr>
+                <tr> 
+                  <td> <b>Lunch</b> </td> 
+                  <td> {{lunch[0].item1}} </td>
+                  <td> {{lunch[0].item2}} </td>
+                  <td> {{lunch[0].item3}} </td>
+                  <td> {{lunch[0].item4}} </td>
+                  <td> {{lunch[0].item5}} </td>
+                  <td> {{lunch[0].item6}} </td>
+                  <td> {{dinner[0].item6}} </td>
+                  
+              </tr>
+              <tr> 
+                <td> <b>Dinner</b> </td> 
+                <td> {{dinner[0].item1}} </td>
+                <td> {{dinner[0].item2}} </td>
+                <td> {{dinner[0].item3}} </td>
+                <td> {{dinner[0].item4}} </td>
+                <td> {{dinner[0].item5}} </td>
+                <td> {{dinner[0].item6}} </td>  
+                <td> {{dinner[0].item6}} </td>  
+            </tr>
+              </tbody>
+        </table>
+        <br>
+
+</div>
+<div class = "row">
+  <div class="col-sm-6 text-center">
+  <p style = " padding-top: 4px; color: white;"><b>Total price for tomorrow: xyz</b></p>
+  
+</div>
+<div class = "col-sm-6 text-center">
+  <button style = "justify-content: center;" type="button" class="btn btn-warning" (click) = "custom()">Customize</button>
+</div>
+</div>
+<br> <br>
+<div class = row>
+<div *ngIf = "show" style = " width : 100%;">
+  <div class = "container customize" style = "background-color: white;">
+   
+    <form action="/action_page.php">
+
+      <div class="form-group">
+        <div class = "row">
+          <div class = "col-sm-9 text-center">
+        <div class = "row">
+          <div class = "col-sm-6">
+        <label for="item1">Item 1:</label>
+        <input type="number" class="form-control" id="email">
+          </div>
+          <div class = "col-sm-6">
+        <label for="item2">Item 2:</label>
+        <input type="number" class="form-control" id="email">
+      </div>
+      </div>
+      
+      <br><br>
+      <div class = "row">
+        <div class = "col-sm-6">
+        <label for="item3">Item 3:</label>
+        <input type="number" class="form-control" id="email">
+        
+        </div>
+        <div class = "col-sm-6">
+          <div>
+        <label for="item4">Item 4:</label>
+        <input type="number" class="form-control" id="email">
+      </div>
+      </div>
+    </div>
+
+      <br><br>
+        <div class = "row">
+          <div class = "col-sm-6">
+            <label for="item6">Item 6:</label>
+        <input type="number" class="form-control " id="email">
+        
+          </div>
+          <div class = "col-sm-6">
+            <label for="item5">Item 5:</label>
+        <input type="number" class="form-control " id="email">
+        
+      </div>
+    </div>
+  </div>
+
+<div class = "col-sm-3 text-center">
+  <div class = "row returns">
+    <button style = "justify-content: center;" type="button" class="btn btn-success" >Submit</button>
+  </div>
+  <div class = "row returns">
+    <button style = "justify-content: center;" type="button" class="btn btn-danger" (click) = "custom()">Cancel</button>
+  </div>
+</div>
+</div>
+</div>
+  </form>
+  
+
+<!--
+<form action="/action_page.php">
+  <label for="items">Breakfast</label>
+  <select id="items" name="items">
+    <option value="Item 1">Item 1</option>
+    <option value="Item 2">Item 2</option>
+    <option value="Item 3">Item 3</option>
+    <option value="Item 4">Item 4</option>
+    <option value="Item 5">Item 5</option>
+    <option value="Item 5">Item 5</option>
+  </select>
+  
+  <br>
+  <input type="submit">
+</form>-->
+
+  
+</div>
+<div class = "col-sm-3"></div>
+</div>

@@ -1,0 +1,43 @@
+th, td {
+    padding: 15px;
+    
+    border: 1px solid black;
+  }
+  th {
+    background-color: #27A599;
+    color: white;
+  }
+  td {
+      color: black;
+      background-color: white;
+  }
+  .table {
+    text-align:center;
+    margin-top: 20%;
+   ;
+  }
+  label 
+  {
+      color: black;
+      font-weight: bold;
+  }
+  .customize{
+    /*margin-left : 34%;
+    margin-right : 31%; */
+    padding : 15px;
+  }
+
+    .form-control {
+    width: 30%;
+    /*padding-top: 12px;
+    
+    padding-bottom: 12px;*/
+    padding-left:  10%;
+  }
+
+
+
+  .returns{
+      padding-top: 30%;
+      padding-bottom: 10%;
+  }
