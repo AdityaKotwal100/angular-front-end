@@ -19,6 +19,11 @@ export class LoginComponent implements OnInit {
 
   @ViewChild('userID') id_no;
   @ViewChild('psw') psw;
+
+  //For registration 
+  @ViewChild('regName') regName;
+  @ViewChild('regEmail') regEmail;
+  @ViewChild('regID') regID;
   @ViewChild('psw1') psw1;
   @ViewChild('cpw') cpw;
 
@@ -28,9 +33,31 @@ export class LoginComponent implements OnInit {
   }
 
 
-  confirm_password() : void{
-    if(this.psw1.nativeElement.value != this.cpw.nativeElement.value)
-    alert('Passwords do not match.');
+  post_details() : void{
+    //if(this.psw1.nativeElement.value != this.cpw.nativeElement.value)
+    //alert('Passwords do not match.');
+
+    //call a validate function before post request
+
+    var name = this.regName.nativeElement.value;
+    var email = this.regEmail.nativeElement.value;
+    var id = this.regID.nativeElement.value;
+    var psw = this.psw1.nativeElement.value;
+
+    this.http.post<any>('http://localhost:8000/students/', { 
+      
+    "student_id": id,
+    "student_name": name,
+    "student_email": email,
+    "student_password": psw
+
+      }).subscribe(data => {
+        
+      alert("Registration is successful!");
+      this.router.navigate(['/menu']);
+      error: error => console.error('There was an error!', error)
+})
+
   }
 
   validate(uname : string, psw : string) : boolean{
@@ -64,7 +91,7 @@ export class LoginComponent implements OnInit {
 
     if(this.validate(this.user_ID,this.password)== true)
   {
-    this.http.get('http://localhost:8000/students/?format=json').subscribe(data => {
+    this.http.get('http://localhost:8000/students/').subscribe(data => {
       this.get_result= data;
       console.log(this.get_result);
       console.log(this.user_ID);
