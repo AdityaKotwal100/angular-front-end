@@ -1,8 +1,7 @@
-.page-header {
-    padding-left: 30px;
+.bg_main {
     padding-bottom : 10px; 
     padding-top : 10px;
-    width: 435%;
+    width: 100%;
     background-color : #27A599;
 }
 button {

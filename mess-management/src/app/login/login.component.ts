@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ComponentFactoryResolver, ViewChildren } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+import { GlobalVariables } from '../global-variables';
 
 @Component({
   selector: 'app-login',
@@ -54,6 +55,8 @@ export class LoginComponent implements OnInit {
       }).subscribe(data => {
         
       alert("Registration is successful!");
+      GlobalVariables.StudentName = name;
+      GlobalVariables.StudentID = id;
       this.router.navigate(['/menu']);
       error: error => console.error('There was an error!', error)
 })
@@ -107,6 +110,8 @@ export class LoginComponent implements OnInit {
           {
             //alert("Credentials matched!");
             flag = 1;
+            GlobalVariables.StudentName = this.get_result[i].student_name;
+            GlobalVariables.StudentID = this.get_result[i].student_id;
             this.router.navigate(['/menu']);
             break;
           }
