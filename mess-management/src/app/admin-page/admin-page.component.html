@@ -1,0 +1,45 @@
+<app-topnav></app-topnav>>
+<div class = "row">
+    <div class = "col-md-3"></div>
+    <div class = "col-md-6">
+    
+        <div class ="row">
+            <table class="table scrolldown">
+                <thead>
+                    <tr>
+                      <th>Item Name</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    <tr *ngFor= "let item of breakfast"> 
+                        <td>{{ item.name }}</td> 
+                        <td> {{ item.price }} </td>
+                        <td style = "background-color: #383F51; border: #383F51;"><button type="button" style = "margin-left : 2%;" class="btn btn-outline-warning">Customize</button>
+                            <button type="button" style = "margin-left : 2%;" class="btn btn-outline-danger">Delete</button>
+                        </td>                 
+                    </tr>
+
+                    <tr *ngFor= "let item of lunch"> 
+                        <td>{{ item.name }}</td> 
+                        <td> {{ item.price }} </td> 
+                        <td style = "background-color: #383F51; border: #383F51;"><button type="button" style = "margin-left : 2%;" class="btn btn-outline-warning">Customize</button>
+                            <button type="button" style = "margin-left : 2%;" class="btn btn-outline-danger">Delete</button>
+                        </td>                     
+                    </tr>
+
+                    <tr *ngFor= "let item of dinner"> 
+                        <td>{{ item.name }}</td> 
+                        <td> {{ item.price }} </td>     <!--Button id will locate element-->  
+                        <td style = "background-color: #383F51; border: #383F51;"><button type="button" style = "margin-left : 2%;" class="btn btn-outline-warning">Customize</button>
+                            <button type="button" style = "margin-left : 2%;" class="btn btn-outline-danger">Delete</button>
+                        </td>               
+                    </tr>
+
+                  </tbody>
+            </table>
+            <br>
+    </div>
+    </div>
+    </div>

@@ -1,0 +1,33 @@
+.top
+{
+    width : auto;
+    background-color: #27A599;
+}
+.row{
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 15px;
+      
+      border: 1px solid black;
+    }
+    th {
+      background-color: #27A599;
+      color: white;
+    }
+    td {
+        color: black;
+        background-color: white;
+    }
+    .table {
+      text-align:center;
+      margin-top: 20%;
+     ;
+    }
+    label 
+    {
+        color: black;
+        font-weight: bold;
+    }
+    
