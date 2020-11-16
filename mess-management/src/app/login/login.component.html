@@ -1,9 +1,16 @@
+<div class = "container">
+  <div class = "row"></div>
+  <div class = "row">
+<div class = "col-sm-4">
+  <div class = "side" style = "background-color: red;">
 
-
-<div class = "container bg1">
+  </div>
+</div>
+<div class = "col-sm-8">
+<div class = "bg1" >
    
         
-      <div *ngIf = "show_register">
+      <div *ngIf = "show_register"  [@inOutAnimation]>
         <div class="container">
           <h1 style="text-align:center;">Login Page</h1>
           <label for="uname"><b>User ID</b></label>
@@ -19,7 +26,7 @@
       </div>
 
         
-        <div *ngIf = "!show_register">
+        <div *ngIf = "!show_register"  [@inOutAnimation]>
         <div class="container register">
           <h1 style="text-align:center;">Registration page</h1>
           <label for="uname"><b>Name</b></label>
@@ -38,5 +45,9 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+</div>
 
+  
 

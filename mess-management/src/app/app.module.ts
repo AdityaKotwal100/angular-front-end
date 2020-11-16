@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { TopnavComponent } from './topnav/topnav.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +22,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule
   ],
